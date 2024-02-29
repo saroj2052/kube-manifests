@@ -10,11 +10,13 @@ spec:
       app: hello-kubernetes
   template:
     metadata:
+      name: nginx
       labels:
         app: hello-kubernetes
     spec:
       containers:
-      - name: hello-kubernetes
-        image: paulbouwer/hello-kubernetes:1.5
+      - name: nginx
+        image: nginx:1.14.2
         ports:
         - containerPort: 8080
+
